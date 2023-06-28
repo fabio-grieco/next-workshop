@@ -2,26 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    @apply bg-gray-200;
+}
+
+header {
+    @apply p-4 text-center text-3xl font-bold bg-indigo-500 text-white;
+}
+
+.pokemon-grid {
+    @apply grid grid-cols-6 gap-4 p-4;
+}
+
+.pokemon-card {
+    @apply justify-center rounded shadow-lg bg-white;
+}
+
+.pokemon-card .name {
+    @apply text-xl text-center font-bold capitalize py-4;
+}
+
+.pokemon-card .image {
+    @apply m-auto;
+}
+
+.pokemon-detail {
+    @apply p-4 text-center;
+}
+
+.pokemon-detail .image {
+    @apply m-auto;
+}
+
+.pokemon-detail > .name {
+    @apply text-3xl font-bold capitalize;
+}
+
+.pokemon-detail .description {
+    @apply text-2xl;
+}
+
+.pokemon-detail > .description::first-letter {
+    @apply capitalize
 }
