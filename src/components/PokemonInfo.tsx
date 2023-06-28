@@ -1,5 +1,4 @@
 import Image from "next/image";
-import {Suspense} from "react";
 import EvolutionChain from "@/components/EvolutionChain";
 import {Pokemon} from "@/models/Pokemon";
 
